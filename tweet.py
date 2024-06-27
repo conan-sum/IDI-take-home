@@ -1,8 +1,3 @@
-# load data using pandas
-# perform data processing
-# add search results to mongodb
-
-
 import pandas as pd
 from datetime import datetime
 import os

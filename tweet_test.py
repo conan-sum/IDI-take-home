@@ -6,12 +6,14 @@ import pytest
 
 
 def test_initialization():
+    # Ensures that the Tweets object initializes correctly
     data = Tweets("data", sep="\t")
     assert data.df is not None
     assert data.row_count > 0
 
 
 def test_search_keys():
+    # Ensures the payload contains all the information
     data = Tweets("data", sep="\t")
     payload = data.search("music")
     assert payload is not None
@@ -20,6 +22,7 @@ def test_search_keys():
 
 
 def test_search_values():
+    # Ensures that the information inside the payload are in the correct format
     data = Tweets("data", sep="\t")
     payload = data.search("music")
     assert payload["search_term"] == "music"
@@ -35,6 +38,7 @@ def test_search_values():
 
 
 def test_database():
+    # Ensures that database connection is established and results are passed properly
     data = Tweets("data", sep="\t")
     payload = data.search("music")
     cols.insert_one(json.loads(json.dumps(payload)))

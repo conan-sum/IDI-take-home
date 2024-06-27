@@ -1,7 +1,7 @@
 ## Getting Started
 
 1. Clone this repository
-2. Create a folder named `data` and place all the datafiles with the same format inside
+2. Create a directory named `data` and place all the datafiles with the same format inside
 3. Create a virtual environment to run the code
 ```commandline
 python -m venv tweets
